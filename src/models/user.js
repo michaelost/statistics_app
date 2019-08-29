@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const orderSchema = new Schema({
+const ActivitySchema = new Schema({
   geo: {
     ip: String,
     city: String,
@@ -16,9 +16,12 @@ const orderSchema = new Schema({
     os: String,
     platform: String,
   },
-  username: String,
-  password: String,
-  activity: Object,
 });
 
-module.exports = mongoose.model('User', orderSchema);
+const UserSchema = new Schema({
+  username: String,
+  password: String,
+  activity: [ActivitySchema],
+});
+
+module.exports = mongoose.model('User', UserSchema);

@@ -37,4 +37,18 @@ router.post('/signup', async function(req, res) {
   }
 });
 
+router.post('/signin', async function(req, res){
+  try {
+    const user =  await User.findOne({ username: req.body.username })
+    await bcrypt.compare(req.body.password, user.password);
+    return res.status(200).json({
+      success: 'Welcome to the JWT Auth'
+    });
+  } catch (err) {
+    return res.status(401).json({
+      failed: 'Unauthorized Access'
+    });
+  }
+});
+
 module.exports = router;

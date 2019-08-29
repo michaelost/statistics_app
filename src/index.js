@@ -18,6 +18,11 @@ app.use(useragent.express());
 app.use(logger);
 app.use(stats);
 
+app.get('/', function (req, res){
+  res.send({});
+  
+});
+
 app.listen(PORT, function () {
   console.log(`Example app listening on port ${PORT}!`);
 });

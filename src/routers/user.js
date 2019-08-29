@@ -42,6 +42,11 @@ router.post('/signin', async function(req, res){
   try {
     const { username, password } = req.body
     const user =  await User.findOne({ username })
+    if (!user) {
+      res.status(401).send({
+        failed: 'user does not exist',
+      });
+    }
     const result = await bcrypt.compare(password, user.password);
     if (result) {
       const JWTToken = jwt.sign({ username, _id: user._id }, 'secret', {

@@ -6,8 +6,12 @@ const { expect } = require('chai');
 
 const activityMiddleware = require('../../../middelware/activity');
 
+const User = require('../../../models/user');
+
 describe('Activity middleware', () => {
   let req, res, next, jwtVerifySpy;
+
+  const updateUserSpy = sinon.spy(User, 'update');
 
   beforeEach(() => {
     req = {
@@ -35,6 +39,10 @@ describe('Activity middleware', () => {
     expect(jwtVerifySpy.called).to.be.false;
   });
 
-
+  it('should not update user if userId is in session', function() {
+    activityMiddleware(req, res, next).then(res => {
+      expect(updateUserSpy.called).to.be.false;
+    });
+  });
 
 });

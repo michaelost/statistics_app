@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const User = require('../models/user');
 
@@ -39,12 +40,19 @@ router.post('/signup', async function(req, res) {
 
 router.post('/signin', async function(req, res){
   try {
-    const user =  await User.findOne({ username: req.body.username })
-    await bcrypt.compare(req.body.password, user.password);
-    return res.status(200).json({
-      success: 'Welcome to the JWT Auth'
-    });
+    const { username, password } = req.body
+    const user =  await User.findOne({ username })
+    const result = await bcrypt.compare(password, user.password);
+    if (result) {
+      const JWTToken = jwt.sign({ username, _id: user._id }, 'secret', {
+        expiresIn: '2h'
+      });
+      return res.status(200).json({
+        token: JWTToken
+      });
+    }
   } catch (err) {
+    console.log(err);
     return res.status(401).json({
       failed: 'Unauthorized Access'
     });

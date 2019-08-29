@@ -6,6 +6,7 @@ require('dotenv').config()
 
 const logger = require('./middelware/logger');
 const stats = require('./middelware/stats');
+const activity = require('./middelware/activity');
 const useragent = require('express-useragent');
 
 const getConnection = require('./connection');
@@ -17,6 +18,7 @@ app.use(bodyParser.json());
 app.use(useragent.express());
 app.use(logger);
 app.use(stats);
+app.use(activity);
 
 app.get('/', function (req, res){
   res.send({});

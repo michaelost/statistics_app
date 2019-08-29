@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node ./node_modules/gulp/bin/gulp.js*",
     "start": "nodemon src/index.js"
   },
   "author": "",
@@ -24,6 +24,10 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "chai": "^4.2.0",
+    "gulp": "^4.0.2",
+    "gulp-mocha": "^7.0.1",
+    "nodemon": "^1.19.1",
+    "sinon": "^7.4.1"
   }
 }

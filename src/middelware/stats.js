@@ -16,7 +16,8 @@ module.exports = async function (req, res, next) {
         version,
         os,
         platform
-      }
+      },
+      endpoint: req.path,
     }
   };
   next();

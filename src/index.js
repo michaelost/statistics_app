@@ -14,6 +14,7 @@ const activity = require('./middelware/activity');
 const useragent = require('express-useragent');
 
 const userRouter = require('./routers/user');
+const apiRouter = require('./routers/api');
 
 const getConnection = require('./connection');
 getConnection();
@@ -30,17 +31,17 @@ app.use(session({
   saveUninitialized: true,
   cookie: { secure: false },
   store: new MongoStore({ url: process.env.MONGO_URL }),
-}))
+}));
 
 app.use(logger);
 app.use(stats);
 app.use(activity);
 
 app.use('/user', userRouter);
+app.use('/api', apiRouter);
 
 app.get('/', function (req, res){
   res.send({});
-  
 });
 
 app.listen(PORT, function () {

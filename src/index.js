@@ -4,6 +4,10 @@ const app = express();
 
 require('dotenv').config()
 
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+const cookieParser = require('cookie-parser');
+
 const logger = require('./middelware/logger');
 const stats = require('./middelware/stats');
 const activity = require('./middelware/activity');
@@ -17,7 +21,17 @@ getConnection();
 const { PORT = 3000 } = process.env;
 
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(useragent.express());
+
+app.use(session({
+  secret: 'keyboard cat',
+  resave: true,
+  saveUninitialized: true,
+  cookie: { secure: false },
+  store: new MongoStore({ url: process.env.MONGO_URL }),
+}))
+
 app.use(logger);
 app.use(stats);
 app.use(activity);

@@ -16,6 +16,7 @@ const ActivitySchema = new Schema({
     os: String,
     platform: String,
   },
+  endpoint: String,
 });
 
 const UserSchema = new Schema({

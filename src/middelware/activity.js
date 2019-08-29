@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
+const { saveUser } = require('../helpers/user');
 
 module.exports = async (req, res, done) => {
   try {
@@ -14,6 +15,13 @@ module.exports = async (req, res, done) => {
           }
         }
       });
+    } else {
+      if (!req.session.userId) {
+        const { _id } = await saveUser({ activity: req.locals.user });
+        req.session.userId = _id
+      } else {
+        await User.update({ _id: req.session.userId }, { $addToSet: { activity: req.locals.user } });
+      }
     }
     
   } catch (err) {

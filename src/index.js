@@ -9,6 +9,8 @@ const stats = require('./middelware/stats');
 const activity = require('./middelware/activity');
 const useragent = require('express-useragent');
 
+const userRouter = require('./routers/user');
+
 const getConnection = require('./connection');
 getConnection();
 
@@ -19,6 +21,8 @@ app.use(useragent.express());
 app.use(logger);
 app.use(stats);
 app.use(activity);
+
+app.use('/user', userRouter);
 
 app.get('/', function (req, res){
   res.send({});

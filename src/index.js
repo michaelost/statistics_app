@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 const app = express();
 
 require('dotenv').config()
@@ -17,7 +18,15 @@ const userRouter = require('./routers/user');
 const apiRouter = require('./routers/api');
 
 const getConnection = require('./connection');
-getConnection();
+const connection = getConnection();
+
+const seeds = require('./seeds');
+
+mongoose.connection.on('connected', () => {
+  seeds();
+
+});
+
 
 const { PORT = 3000 } = process.env;
 

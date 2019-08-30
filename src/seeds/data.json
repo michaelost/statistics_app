@@ -1,0 +1,262 @@
+[{
+    "activity" : [ 
+        {
+            "geo" : {
+                "ip" : "199.80.124.61",
+                "city" : "Baton Rouge",
+                "region" : "Louisiana",
+                "country" : "US",
+                "loc" : "30.4438,-91.1775",
+                "postal" : "70802"
+            },
+            "client" : {
+                "browser" : "PostmanRuntime",
+                "version" : "7.3.0",
+                "os" : "Linux",
+                "platform" : "Linux"
+            }
+        }, 
+        {
+            "geo" : {
+                "ip" : "199.80.124.61",
+                "city" : "Baton Rouge",
+                "region" : "Louisiana",
+                "country" : "US",
+                "loc" : "30.4438,-91.1775",
+                "postal" : "70802"
+            },
+            "client" : {
+                "browser" : "PostmanRuntime",
+                "version" : "7.3.0",
+                "os" : "Linux",
+                "platform" : "Linux"
+            }
+        }
+    ]
+},
+{
+    "activity" : [ 
+        {
+            "geo" : {
+                "ip" :" 188.163.113.67",
+                "city" : "Lviv",
+                "region" : "Louisiana",
+                "country" : "UA",
+                "loc" : "30.4438,-91.1775",
+                "postal" : "70802"
+            },
+            "client" : {
+                "browser" : "Chrome",
+                "version" : "69.0.3497.100",
+                "os" : "Linux 64",
+                "platform" : "Linux"
+            }
+        }
+    ]
+},
+{
+    "activity" : [ 
+        {
+            "geo" : {
+                "ip" :" 188.163.113.67",
+                "city" : "Lviv",
+                "region" : "Louisiana",
+                "country" : "UA",
+                "loc" : "30.4438,-91.1775",
+                "postal" : "70802"
+            },
+            "client" : {
+                "browser" : "Chrome",
+                "version" : "69.0.3497.100",
+                "os" : "Linux 64",
+                "platform" : "Linux"
+            }
+        },
+        {
+            "geo" : {
+                "ip" :" 188.163.113.67",
+                "city" : "Lviv",
+                "region" : "Louisiana",
+                "country" : "UA",
+                "loc" : "30.4438,-91.1775",
+                "postal" : "70802"
+            },
+            "client" : {
+                "browser" : "Chrome",
+                "version" : "69.0.3497.100",
+                "os" : "Linux 64",
+                "platform" : "Linux"
+            }
+        },
+        {
+            "geo" : {
+                "ip" :" 188.163.113.67",
+                "city" : "Lviv",
+                "region" : "Louisiana",
+                "country" : "UA",
+                "loc" : "30.4438,-91.1775",
+                "postal" : "70802"
+            },
+            "client" : {
+                "browser" : "Chrome",
+                "version" : "69.0.3497.100",
+                "os" : "Linux 64",
+                "platform" : "Linux"
+            }
+        }
+    ]
+},
+{
+    "activity" : [ 
+        {
+            "geo" : {
+                "ip" :" 184.163.113.67",
+                "city" : "Kyiv",
+                "region" : "Louisiana",
+                "country" : "UA",
+                "loc" : "30.4438,-91.1775",
+                "postal" : "70802"
+            },
+            "client" : {
+                "browser" : "Chrome",
+                "version" : "69.0.3497.100",
+                "os" : "Windows 64",
+                "platform" : "Windows"
+            }
+        }
+    ]
+},
+{
+    "activity" : [ 
+        {
+            "geo" : {
+                "ip" :" 184.163.113.67",
+                "city" : "Kyiv",
+                "region" : "Louisiana",
+                "country" : "UA",
+                "loc" : "30.4438,-91.1775",
+                "postal" : "70802"
+            },
+            "client" : {
+                "browser" : "Chrome",
+                "version" : "69.0.3497.100",
+                "os" : "Windows 64",
+                "platform" : "Windows"
+            }
+        }
+    ]
+},
+{
+    "username" : "bob",
+    "password" : "$2b$10$7F8JkUXOTQ.vdD7yj3Sj4OMq/GDG3wt/SwLFrNQmz5/ozVNWPj7Ya",
+    "activity" : [ 
+        {
+            "geo" : {
+                "ip" : "299.80.124.61",
+                "city" : "Baton Rouge",
+                "region" : "Louisiana",
+                "country" : "US",
+                "loc" : "30.4438,-91.1775",
+                "postal" : "70802"
+            },
+            "client" : {
+                "browser" : "PostmanRuntime",
+                "version" : "7.3.0",
+                "os" : "Linux",
+                "platform" : "Linux"
+            }
+        }, 
+        {
+            "geo" : {
+                "ip" : "199.80.124.61",
+                "city" : "Baton Rouge",
+                "region" : "Louisiana",
+                "country" : "US",
+                "loc" : "30.4438,-91.1775",
+                "postal" : "70802"
+            },
+            "client" : {
+                "browser" : "PostmanRuntime",
+                "version" : "7.3.0",
+                "os" : "Linux",
+                "platform" : "Linux"
+            }
+        }
+    ]
+},
+{
+    "username" : "frank",
+    "activity" : [ 
+        {
+            "geo" : {
+                "ip" : "299.80.124.61",
+                "city" : "Baton Rouge",
+                "region" : "Louisiana",
+                "country" : "US",
+                "loc" : "30.4438,-91.1775",
+                "postal" : "70802"
+            },
+            "client" : {
+                "browser" : "PostmanRuntime",
+                "version" : "7.3.0",
+                "os" : "Windows",
+                "platform" : "Windows"
+            }
+        }, 
+        {
+            "geo" : {
+                "ip" : "139.80.124.61",
+                "city" : "Baton Rouge",
+                "region" : "Louisiana",
+                "country" : "UK",
+                "loc" : "30.4438,-91.1775",
+                "postal" : "70802"
+            },
+            "client" : {
+                "browser" : "PostmanRuntime",
+                "version" : "7.3.0",
+                "os" : "Windows",
+                "platform" : "Windows"
+            }
+        }
+    ]
+},
+
+{
+    "activity" : [ 
+        {
+            "geo" : {
+                "ip" : "299.80.124.61",
+                "city" : "Krakow",
+                "region" : "Louisiana",
+                "country" : "Poland",
+                "loc" : "30.4438,-91.1775",
+                "postal" : "70802"
+            },
+            "client" : {
+                "browser" : "PostmanRuntime",
+                "version" : "7.3.0",
+                "os" : "Windows",
+                "platform" : "Windows"
+            }
+        }, 
+        {
+            "geo" : {
+                "ip" : "129.80.124.61",
+                "city" : "London",
+                "region" : "London",
+                "country" : "UK",
+                "loc" : "30.4438,-91.1775",
+                "postal" : "70802"
+            },
+            "client" : {
+                "browser" : "PostmanRuntime",
+                "version" : "7.3.0",
+                "os" : "Windows",
+                "platform" : "Windows"
+            }
+        }
+    ]
+}
+]
+

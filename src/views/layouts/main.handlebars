@@ -1,0 +1,30 @@
+<h1>Statistics:  overall visits: {{visits}}</h1>
+
+<h3><p>ip:</p></h3>
+<ul>
+  {{#each ip}}
+    <li>{{@key}} : {{this}} times</li>
+  {{/each}}
+</ul>
+
+<h3><p>country:</p></h3>
+<ul>
+  {{#each country}}
+    <li>{{@key}} : {{this}} times</li>
+  {{/each}}
+</ul>
+
+<h3><p>city:</p></h3>
+<ul>
+  {{#each city}}
+    <li>{{@key}} : {{this}} times</li>
+  {{/each}}
+</ul>
+
+<h3><p>endpoint:</p></h3>
+<ul>
+  {{#each endpoint}}
+    <li>{{@key}} : {{this}} times</li>
+  {{/each}}
+</ul>
+

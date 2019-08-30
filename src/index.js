@@ -1,7 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const exphbs  = require('express-handlebars');
+const path = require('path');
+ 
 const app = express();
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
 
 require('dotenv').config()
 
@@ -24,9 +30,7 @@ const seeds = require('./seeds');
 
 mongoose.connection.on('connected', () => {
   seeds();
-
 });
-
 
 const { PORT = 3000 } = process.env;
 

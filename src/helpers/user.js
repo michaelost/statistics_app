@@ -3,9 +3,7 @@ const getUser = async username => User.findOne({ username });
 const saveUser = async (user) => (new User(user)).save()
 const getAllUsers = async () => User.find({});
 
-
 const getStats = (users) => {
-
   let stats = {
     platform: {},
     country: {},
@@ -17,7 +15,6 @@ const getStats = (users) => {
     region: {},
     visits: 0,
   };
-
   const inc = (object, key) => {
     if (!object[key]) {
       object[key] = 1;
